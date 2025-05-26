@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detection Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Detection Result</h1>
+        <p>{{ prediction }}</p>
+        
+        <div class="image-container">
+            <div>
+                <h3>Original Frame</h3>
+                <img src="{{ url_for('static', filename='uploads/' + original_frame) }}" alt="Original Frame">
+            </div>
+            <div>
+                <h3>Reconstructed Frame</h3>
+                <img src="{{ url_for('static', filename='uploads/' + reconstructed_frame) }}" alt="Reconstructed Frame">
+            </div>
+        </div>
+
+        <a href="/">Upload Another File</a>
+    </div>
+</body>
+</html>
